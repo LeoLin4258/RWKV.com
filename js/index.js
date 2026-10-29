@@ -1,5 +1,13 @@
 const allProjects = [
   {
+    "title": "WheatNet: A lightweight network for wheat seedling detection and counting in complex fields",
+    "description": "WheatNet detects and counts wheat seedlings in complex field images using a GE-VRWKV encoder, multi-scale feature fusion, and REAA modules. The architecture combines RWKV-based global dependency modeling with a detection network for dense, small seedlings.",
+    "date": "2026-10-16",
+    "tags": "Image",
+    "img": "images/papers-images/img-20261016-1.jpg",
+    "link": "https://doi.org/10.1016/j.atech.2026.102648"
+  },
+  {
     "title": "Frame-Wise Streaming for Efficient Learned Speech Compression",
     "description": "StreamLSC enables frame-level streaming speech compression using RNN-mode RWKV, boundary-cached causal convolutions, intra-frame layer normalization, and a streamable entropy model. It preserves causal processing and reports rate-distortion performance comparable to its offline counterpart, with perceptual-quality gains against the evaluated codecs at ultra-low bitrates.",
     "date": "2026-10-15",
