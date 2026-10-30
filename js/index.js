@@ -1,7 +1,7 @@
 const allProjects = [
   {
     "title": "WheatNet: A lightweight network for wheat seedling detection and counting in complex fields",
-    "description": "WheatNet detects and counts wheat seedlings in complex field images using a GE-VRWKV encoder, multi-scale feature fusion, and REAA modules. The architecture combines RWKV-based global dependency modeling with a detection network for dense, small seedlings.",
+    "description": "WheatNet introduces the WheatSC dataset and combines a GE-VRWKV backbone, rotation-enhanced area attention, and a WIoU-NWD loss for wheat seedling detection. The reported model has 3.83M parameters and runs at 156 FPS on the test platform, achieving 92.70% mAP@0.5 and 82.82% mAP@0.5:0.95, gains of 3.98 and 4.86 percentage points over the YOLO11 baseline.",
     "date": "2026-10-16",
     "tags": "Image",
     "img": "images/papers-images/img-20261016-1.jpg",
@@ -9,7 +9,7 @@ const allProjects = [
   },
   {
     "title": "Frame-Wise Streaming for Efficient Learned Speech Compression",
-    "description": "StreamLSC enables frame-level streaming speech compression using RNN-mode RWKV, boundary-cached causal convolutions, intra-frame layer normalization, and a streamable entropy model. It preserves causal processing and reports rate-distortion performance comparable to its offline counterpart, with perceptual-quality gains against the evaluated codecs at ultra-low bitrates.",
+    "description": "StreamLSC combines RNN-mode RWKV state propagation, boundary-cached causal convolutions, intra-frame layer normalization, and a streamable entropy quantizer for causal frame-level speech compression. The reported evaluations show average BD-rate savings of 51.37% by ViSQOL and 53.99% by PESQ, alongside improved subjective MUSHRA results.",
     "date": "2026-10-15",
     "tags": "Audio",
     "img": "images/papers-images/img-20261015-1.jpg",
@@ -17,7 +17,7 @@ const allProjects = [
   },
   {
     "title": "Multi-direction shift RWKV and frequency-aware semantic network with for Ultrasound Image Segmentation",
-    "description": "MDS-RWKV combines multi-direction spatial shifts with linear-complexity WKV recurrence for ultrasound image segmentation. Spatial and Spectral Cross Aggregation integrates multi-scale spatial features with Fourier-domain representations, while a Global and Local Feature Decoder reconstructs lesion masks. Evaluation covers BUSI, BUS-BRA, and TN-SCUI.",
+    "description": "MDS-RWKV combines multi-direction spatial shifts with linear-complexity WKV recurrence for ultrasound image segmentation. Spatial and Spectral Cross Aggregation fuses multi-scale spatial and Fourier-domain features, while a Global and Local Feature Decoder reconstructs masks. Reported mIoU scores are 71.27% on BUSI, 84.18% on BUS-BRA, and 79.87% on TN-SCUI.",
     "date": "2026-10-14",
     "tags": "Image",
     "img": "images/papers-images/img-20261014-1.jpg",
@@ -25,7 +25,7 @@ const allProjects = [
   },
   {
     "title": "A State Monitoring Method for Shear Hinges in Floating Slab Tracks Based on FMTF and PCNN-RWKV Fusion Network",
-    "description": "This shear-hinge monitoring method transforms vibration spectra into Frequency Domain Markov Transition Field images. Parallel convolutional networks extract multi-scale features, and RWKV models cross-channel dependencies. The study reports 97.62% overall accuracy for classifying normal, abnormal-response, and fractured shear-hinge states on its evaluation dataset.",
+    "description": "This shear-hinge monitoring method transforms floating-slab vibration spectra into Frequency Domain Markov Transition Field images, extracts multi-scale features with parallel convolutional networks, and fuses cross-channel dependencies with RWKV. On metro-line data, reported accuracies are 98.19% for normal states, 95.39% for abnormal responses, and 99.37% for fractures, with 97.62% overall accuracy.",
     "date": "2026-10-12",
     "tags": "Sequence",
     "img": "images/papers-images/img-20261012-1.jpg",
@@ -33,7 +33,7 @@ const allProjects = [
   },
   {
     "title": "Compute-Optimal Scaling Laws for Spiking Language Models",
-    "description": "This IsoFLOP study evaluates SpikeGPT-family language models with an RWKV backbone on FineWeb-EDU. Under total-parameter counting, the compute-optimal frontier scales as N_opt proportional to C^0.56. Comparisons with non-spiking RWKV and Transformer baselines separate an approximately constant backbone loss gap from a spiking loss gap that decreases over the tested compute range.",
+    "description": "This Chinchilla-style IsoFLOP study evaluates SpikeGPT-family language models with an RWKV backbone. Under total-parameter counting, the compute-optimal frontier scales as N_opt proportional to C^0.56. Comparisons with non-spiking RWKV and Transformer baselines separate a backbone loss cost of about 0.16 nats from a spiking cost that falls from 0.34 to 0.23 nats over the tested compute range.",
     "date": "2026-10-10",
     "tags": "Language",
     "img": "images/papers-images/img-20261010-2.jpg",
@@ -49,7 +49,7 @@ const allProjects = [
   },
   {
     "title": "HART: Hybrid Attention-RWKV Time series Foundation Model",
-    "description": "HART alternates attention and RWKV blocks for non-autoregressive time-series forecasting, addressing a proposed state-decay mechanism when future observations are missing. The 36M-parameter model improves medium- and long-horizon forecasting over the pure RWKV baseline; on GIFT-Eval its long-horizon MASE is 0.752 versus 0.754 for Toto-2.0-1B.",
+    "description": "HART alternates attention and RWKV blocks for non-autoregressive multi-step time-series forecasting, addressing long-horizon degradation associated with the proposed Placeholder Idling Decay mechanism. With 36M parameters, it achieves a long-horizon MASE of 0.752 on GIFT-Eval, comparable to 0.754 for Toto-2.0-1B.",
     "date": "2026-10-09",
     "tags": "Sequence",
     "img": "images/papers-images/img-20261009-1.jpg",
@@ -57,7 +57,7 @@ const allProjects = [
   },
   {
     "title": "SGF-RWKV: Semantic-Guided and Frequency-Enhanced RWKV for Unified Medical Image Denoising",
-    "description": "SGF-RWKV combines an RWKV-based U-Net with CLIP text guidance, Fourier-magnitude enhancement, and dilated multi-scale shifts for medical image denoising. A shared model is jointly trained across MRI, CT, ultrasound, OCT, and cryo-EM datasets, using degradation-specific text prompts to guide noise suppression while preserving structural details.",
+    "description": "SGF-RWKV combines an RWKV backbone with CLIP-guided task-aware attention, Fourier-magnitude enhancement, and dilated multi-scale shifts for unified medical image denoising. Reported experiments across MRI, CT, ultrasound, OCT, and cryo-EM show an average PSNR improvement of 0.59 dB, alongside better SSIM and RMSE results than the compared methods.",
     "date": "2026-10-06",
     "tags": "Image",
     "img": "images/papers-images/img-20261006-1.jpg",
